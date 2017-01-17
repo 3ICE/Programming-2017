@@ -7,7 +7,6 @@ int abs(int i){
     return i;
 }
 
-
 int main(/*int argc, char *argv[]*/){
     cout << "Hello! Type a number please..." << endl;
     int i = 0;
