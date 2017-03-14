@@ -49,11 +49,9 @@ RCS
 SCCS
 
 /project-0?/project-0?
-/project-?/project-?
 /weekly-assignment-[01]?/weekly-assignment-[01]?
 /project-0?/Makefile
-/project-?/Makefile
-/project-?/debug/
-/project-?/Makefile.Debug
-/project-?/Makefile.Release
+/project-0?/debug/
+/project-0?/Makefile.Debug
+/project-0?/Makefile.Release
 /weekly-assignment-[01]?/Makefile
