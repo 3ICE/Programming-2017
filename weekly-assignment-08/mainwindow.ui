@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Mainwindow</class>
+ <widget class="QWidget" name="Mainwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>101</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>km/h -&gt; miles/h</string>
+  </property>
+  <widget class="QSpinBox" name="km">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>3</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="suffix">
+    <string> km/h</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="km2">
+   <property name="geometry">
+    <rect>
+     <x>111</x>
+     <y>10</y>
+     <width>301</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="miles">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>37</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>109</x>
+     <y>37</y>
+     <width>66</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>miles/h</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>66</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quit">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>66</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>quit</sender>
+   <signal>clicked()</signal>
+   <receiver>Mainwindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>km</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>km2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>km2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>km</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
