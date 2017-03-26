@@ -29,7 +29,7 @@ public:
     /**
      * @brief product::operator < compares two objects by their price.
      * @param b the other product object
-     * @return super() comparator
+     * @return super() comparator (price)
      */
     bool operator<(const product&b);
 

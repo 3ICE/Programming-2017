@@ -18,7 +18,7 @@ using namespace std;
 /**
  * @brief product::operator < compares two objects by their price.
  * @param b the other product object
- * @return super() comparator
+ * @return super() comparator (price)
  */
 bool product::operator<(const product&b){
     return this->price < b.price;

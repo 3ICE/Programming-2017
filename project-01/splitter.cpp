@@ -44,7 +44,7 @@ void Splitter::set_string_to_split(const string& string_to_split){
 size_t Splitter::split(char separator, bool ignore_empty){
     fields.clear();
     string buf = "";
-    int i = 0;
+    unsigned int i = 0;
     while(i < str.length()) {
         if(str[i] != separator)
             buf += str[i];

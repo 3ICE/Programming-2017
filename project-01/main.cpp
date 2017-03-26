@@ -93,7 +93,7 @@ int main(){
         Splitter s(input);
         s.split(' ');
         args.clear();
-        for(int i = 0; i < s.number_of_fields(); ++i) {
+        for(unsigned int i = 0; i < s.number_of_fields(); ++i) {
             args.push_back(s.fetch_field(i));
         }
         if(args.size()==0){
@@ -101,19 +101,21 @@ int main(){
             continue; //3ICE: I'm not going to print invalid command on no input.
         }
         string command = args[0]; //3ICE: Readability enhancer.
-        if(command == "chains") database.chains();
+        if(command == "chains")
+            if(args.size() == 1) database.chains();
+            else cout << "Error: usage is [chains] (needs no command line parameters)" << endl;
 
         else if(command == "stores")
-            if(args.size() >= 2) database.stores(args[1]);
-            else cout << "Error: usage is [stores marketplace] (needs two command line parameters)" << endl;
+            if(args.size() == 2) database.stores(args[1]);
+            else cout << "Error: usage is [stores marketplace] (needs one command line parameter)" << endl;
 
         else if(command == "selection")
-            if(args.size() >= 3) database.products(args[1], args[2]);
-            else cout << "Error: usage is [selection marketplace store] (needs three command line parameters)" << endl;
+            if(args.size() == 3) database.products(args[1], args[2]);
+            else cout << "Error: usage is [selection marketplace store] (needs two command line parameters)" << endl;
 
         else if(command == "cheapest")
-            if(args.size() >= 2) database.cheapest(args[1]);
-            else cout << "Error: usage is [cheapest product] (needs two command line parameters)" << endl;
+            if(args.size() == 2) database.cheapest(args[1]);
+            else cout << "Error: usage is [cheapest product] (needs one command line parameter)" << endl;
 
         else if(command != "quit"){//3ICE: Avoid printing error message before quitting (visible for a split second)
             cout << "Error: \"" << input << "\" not recognized. "

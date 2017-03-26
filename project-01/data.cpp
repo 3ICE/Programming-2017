@@ -60,7 +60,7 @@ bool data::add(string market, string store, string name, double cost){
             //3ICE: Store already exists.
             //if(database.at(market).at(store).find(name) != database.at(market).at(store).end())
             bool overwrite = false;
-            for (int i = 0; i < database[market][store].size(); ++i) {
+            for (unsigned int i = 0; i < database[market][store].size(); ++i) {
                 if(database[market][store][i].name == name){
                     //3ICE: Product already exists. Gotta change its price:
                     overwrite = true;
@@ -100,7 +100,7 @@ void data::chains(){
         chain_names.push_back(marketplace.first);
     }
     sort(chain_names.begin(), chain_names.end());
-    cout << chain_names.size() << endl;
+    //cout << chain_names.size() << endl;
     for(auto chain_name : chain_names){
         cout << chain_name << endl;
     }
@@ -126,6 +126,20 @@ void data::stores(string market_name){
     }
 }
 
+
+
+/**
+ * @brief alphabetical sorting for products like product::operator<
+ * but based on the name instead of price.
+ * @param a the left-side operand (product object)
+ * @param b the other product object
+ * @return comparator-like behavior (string-based, on name)
+ */
+bool alphabetical(const product&a, const product&b){
+    return a.name < b.name;
+}
+
+
 /**
  * @brief data::products lists all products for sale in then given market's store
  * @param market string name of
@@ -149,7 +163,7 @@ void data::products(string market, string store){
         ++product_iterator){
         products.push_back(*product_iterator);
     }
-    sort(products.begin(), products.end());
+    sort(products.begin(), products.end(), alphabetical);
     for(auto product : products){
         //3ICE: Instead of doing any of these ugly things:
         //(*product_iterator).print(); /* or */
