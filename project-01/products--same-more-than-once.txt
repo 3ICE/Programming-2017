@@ -1,0 +1,3 @@
+Prisma;Kaleva;milk;0.80
+Prisma;Kaleva;milk;0.90
+Prisma;Kaleva;milk;1.00

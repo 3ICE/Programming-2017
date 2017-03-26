@@ -1,0 +1,2 @@
+Prisma;Koivistonkyla;milk;0.90
+Prisma;Kaleva;milk;0.90
