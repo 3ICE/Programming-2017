@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>309</width>
+    <width>381</width>
     <height>201</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>291</width>
+      <width>361</width>
       <height>161</height>
      </rect>
     </property>
@@ -104,6 +104,15 @@
       <layout class="QHBoxLayout" name="hl1">
        <item>
         <widget class="QSpinBox" name="weight">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
          <property name="suffix">
           <string> kg</string>
          </property>
@@ -134,6 +143,15 @@
       <layout class="QHBoxLayout" name="hl2">
        <item>
         <widget class="QSpinBox" name="height">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
          <property name="suffix">
           <string> cm</string>
          </property>
@@ -190,7 +208,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>309</width>
+     <width>381</width>
      <height>21</height>
     </rect>
    </property>
