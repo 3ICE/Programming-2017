@@ -1,6 +1,21 @@
+/** This file holds the core program logic behind the user interface.
+ * Implemented functions are work (for calculating bmi and updating
+ * the UI), and reset (for restoring the UI into its default state).
+ * + minor helper functions female_checked, male_checked and close.
+ * @author Daniel "3ICE" Berezvai
+ * @student_id 262849
+ * @email daniel.berezvai@student.tut.fi
+ */
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+/** This method sets up the user interface and registers (some) signals
+ * between the components. Other signals are only declared in mainwindow.ui,
+ * which is a little confusing and really annoying to work with.
+ * @param parent: not applicable, this is the top window as the class name
+ * hints. Default value is zero (no parent), which is good enough for my
+ * purposes.
+ */
 MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
     //3ICE: Recalculate if any of these three fields change:
@@ -15,16 +30,23 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
 
     //3ICE: Yeah, so GUI-created signals are terrible. Must use code.
     //Creative function names: f... m... l?
-    connect(ui->actionFemale,SIGNAL(triggered(bool)),this,SLOT(f(bool)));
-    connect(ui->actionMale,SIGNAL(triggered(bool)),this,SLOT(m(bool)));
+    connect(ui->actionFemale,SIGNAL(triggered(bool)),this,SLOT(female_checked(bool)));
+    connect(ui->actionMale,SIGNAL(triggered(bool)),this,SLOT(male_checked(bool)));
 
     connect(ui->actionReset,SIGNAL(triggered(bool)),this,SLOT(reset()));
 }
 
+/**
+ * @brief MainWindow::~MainWindow
+ * destructor's gonna destruct.
+ */
 MainWindow::~MainWindow(){
     delete ui;
 }
 
+/** Restores the UI to default state. This method went through some
+ * revisions. Debugging other functions for hours broke this one :)
+ */
 void MainWindow::reset(){
     ui->height->setValue(0);
     ui->weight2->setValue(0);
@@ -42,16 +64,22 @@ void MainWindow::reset(){
     }
 }
 
-/** Who wants a docstring? I usually do it. But it's 5 am now... */
+/** This method calculates the bmi (unless there's a zero), updates the UI
+ * and chronicles my struggles with Qt, C++11 compilers with 5 year old
+ * bug reports, and finally my beautiful BMI calculator at the end.
+ * @note Who wants a docstring? I usually do it. But it's 5 am now...
+ * @footnote Well I did it. 8 am now. Proper all-nighter. Do I get a cookie?
+ * Grade 5 will be enough.
+ */
 void MainWindow::work(){
     if(ui->height->value()==0.0 || ui->weight->value()==0.0){
-        ui->interp->setText("-");
+        ui->interpreted_bmi->setText("-");
         ui->bmi->setText("-");
         return;
     }
 
-    float m = (float)ui->height->value() / 100;
-    float bmi = ui->weight->value() / (m*m);
+    float height_in_meters = (float)ui->height->value() / 100;
+    float bmi = ui->weight->value() / (height_in_meters*height_in_meters);
 
     //ui->bmi->setText(to_string(bmi));
     //3ICE: Obviously to_string has been bugged for years now.
@@ -63,8 +91,8 @@ void MainWindow::work(){
     //3ICE: Oh you expletive Qt... Won't even accept string, wants QString.
 
     //Well, here you go then, eat your QString:
-    QString bmi_s = QString::number(bmi);
-    ui->bmi->setText(bmi_s);
+    QString bmi_string = QString::number(bmi);
+    ui->bmi->setText(bmi_string);
 
     //3ICE: Oops, could have used ui->bmi->setNum(bmi); //oh well...
 
@@ -83,10 +111,13 @@ void MainWindow::work(){
         else               result="Much overweight";
     }
 
-    ui->interp->setText(result);
+    ui->interpreted_bmi->setText(result);
 }
 
-//3ICE: I'm keeping this name because that's what the function did initially.
+/** I'm keeping this name because that's what the function did initially.
+ * Now it does nothing. Disregard or read all the comments for their
+ * slight entertainment value. Documenting my suffering continued...
+ */
 void MainWindow::avoidInfiniteLoop(){
     //3ICE: Let's start with a funny debug message I left in:
     //ui->bmi->setText(infiniteLoop?"1 dis fe, en ma":"0 dis ma en fe");
@@ -143,14 +174,28 @@ void MainWindow::avoidInfiniteLoop(){
     //ui->gender->setText(ui->actionFemale->isChecked()?"Female":"Male");
     //Update: And now even that's broken. See f and m below for fix:
 }
+//3ICE: Oh, the crazy things I do for grade 5...
 
-void MainWindow::f(bool on){
+/**
+ * @brief MainWindow::female_checked Unfortunately necessary
+ * for keeping the order of things / the user in line...
+ * @param on:bool whether the checkbox was toggled on or off.
+ * This is important because if it was toggled off, I need to
+ * toggle it back on (because that's how the sample program works.
+ *
+ * Helper function.
+ */
+void MainWindow::female_checked(bool on){
     if(on) ui->actionMale->setChecked(false);
     else ui->actionFemale->setChecked(true); //3ICE: Stop them from toggling it off
     ui->gender->setText("Female");
 }
 
-void MainWindow::m(bool on){
+/** @see MainWindow::female_checked(bool)
+ *
+ * Helper function.
+ */
+void MainWindow::male_checked(bool on){
     if(on) ui->actionFemale->setChecked(false);
     else ui->actionMale->setChecked(true);
     ui->gender->setText("Male");

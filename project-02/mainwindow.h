@@ -1,3 +1,8 @@
+/** See mainwindow.cpp for the actual documentation.
+ * @author Daniel "3ICE" Berezvai
+ * @student_id 262849
+ * @email daniel.berezvai@student.tut.fi
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -18,8 +23,8 @@ public slots:
     void reset();
     void work();
     void avoidInfiniteLoop();
-    void f(bool);
-    void m(bool);
+    void female_checked(bool);
+    void male_checked(bool);
 
 private:
     Ui::MainWindow *ui;
