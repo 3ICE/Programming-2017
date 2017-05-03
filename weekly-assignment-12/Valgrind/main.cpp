@@ -3,10 +3,10 @@
 using namespace std;
 
 int main() {
-    int number1;
-    int number2 = 111;
-    int *pointer1 = new int;
-    int *pointer2 = new int(222);
+    int number1 = 111;
+    int number2 = 222;
+    int *pointer1 = new int(333);
+    int *pointer2 = new int(444);
 
     cout << number1 << " "
          << number2 << " "
@@ -14,6 +14,5 @@ int main() {
          << *pointer2 << endl;
 
     delete pointer1;
-
-    *pointer1 = 333;
+    delete pointer2;
 }
