@@ -1,0 +1,428 @@
+MIME-Version: 1.0
+Date: Wed, 3 May 2017 14:46:45 +0300
+From: Daniel Berezvai <daniel.berezvai@student.tut.fi>
+Subject: Please reconsider my grade for project-01
+Thread-Topic: Please reconsider my grade for project-01
+To: =?utf-8?Q?Eliisa_V=C3=A4kev=C3=A4?= <eliisa.vakeva@student.tut.fi>
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.sc161
+	{mso-style-name:sc161;
+	font-family:"Courier New";
+	color:#8000FF;}
+span.sc101
+	{mso-style-name:sc101;
+	font-family:"Courier New";
+	color:navy;
+	font-weight:bold;}
+span.sc0
+	{mso-style-name:sc0;
+	font-family:"Courier New";
+	color:black;}
+span.sc31
+	{mso-style-name:sc31;
+	font-family:"Courier New";
+	color:teal;}
+span.sc21
+	{mso-style-name:sc21;
+	font-family:"Courier New";
+	color:green;}
+span.sc11
+	{mso-style-name:sc11;
+	font-family:"Courier New";
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"HU">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Hi,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Thank you for grading my first =
+project in TIE-02206 Basic Course on Programming spring 2017. I have taken =
+your tips and recommendations to heart and will use them in project-03 (Not=
+ project-02 for that is already submitted
+ and past deadline.) You have even answered the questions I left in comment=
+s, which was very nice of you.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">I was rather saddened to see I =
+was only awarded with a grade 3 and was wondering if I could defend my desi=
+gn choices to you for grade 5 instead. Or at the very least a bump up to gr=
+ade 4 =E2=80=93 the happy medium. It would make
+ it easier to push my final (average) grade to 5.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">This is the reason why I got 3:=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">* The maximum grade is 3 due to the issu=
+es related to class design<o:p></o:p></span></pre>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp; - There are pointless variables i=
+n the private part of the class &quot;data&quot;. <o:p></o:p></span></pre>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp;&nbsp;&nbsp;&nbsp;Private attribut=
+es should always contain the information related to <o:p></o:p></span></pre=
+>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp;&nbsp;&nbsp;&nbsp;the state of the=
+ object. Private part of the class should not include <o:p></o:p></span></p=
+re>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp;&nbsp;&nbsp;&nbsp;variables to sto=
+re temporary values used by member functions <o:p></o:p></span></pre>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp;&nbsp;&nbsp;&nbsp;(iterators in th=
+is case).<o:p></o:p></span></pre>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp; - Member variables aka attributes=
+ should be defined in the private part <o:p></o:p></span></pre>
+<pre style=3D"margin-left:1.0cm;background:white"><span lang=3D"EN-US" styl=
+e=3D"font-size:12.0pt;color:black">&nbsp;&nbsp;&nbsp;&nbsp;of the class, no=
+t in the public part.<o:p></o:p></span></pre>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">I acknowledge that both points =
+are valid, I did commit these atrocities in my code. But the penalty is too=
+ harsh. And I also have some hopefully very good excuses for why I coded th=
+is way, excuses that I will soon present
+ for your consideration.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">I was greatly disheartened to b=
+e graded so low on a project that I spent several hours on, over the span o=
+f weeks. With the only reason given for the harsh penalty (that I was able =
+to discover) is a beginner design principle
+ that I was of course very well aware of. (As demonstrated in the other two=
+ classes where I have not made the same mistake.) It merely slipped my scru=
+tiny when I evaluated myself (repeatedly). I can sometimes mix up conventio=
+ns - what we=E2=80=99re supposed to do,
+ how, where, and in which language(s), because I am familiar with so many -=
+ over 20 programming languages in fact. I=E2=80=99m also an unofficial TA, =
+running a study group comprising of 12 people across 5 subjects (C&#43;&#43=
+;, Python, Software Architectures, Engineering Methodology
+ and Web Development) with weekly meetings. It was funny when we found out =
+my pupils got better grades than me=E2=80=A6 (=E2=80=9CWho=E2=80=99s the te=
+acher now, haha.=E2=80=9D)<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">In my defense, I don=E2=80=99t =
+consider any of these pointless:<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc161"><sp=
+an lang=3D"EN-US" style=3D"font-size:10.0pt">private</span></span><span cla=
+ss=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">:</span></span=
+><span class=3D"sc0"><span lang=3D"EN-US" style=3D"font-size:10.0pt"><o:p><=
+/o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc31"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">/** This is where the magic happens. My data structure of choice wo=
+uld have been</span></span><span class=3D"sc31"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc31"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;&nbsp; * map&=
+lt;string, map&lt;string, map&lt;string, double&gt;&gt;&gt;, not<o:p></o:p>=
+</span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc31"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;&nbsp; * map&=
+lt;string, map&lt;string, vector&lt;string, double&gt;&gt;&gt; but oh well.=
+ I'm not changing<o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc31"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;&nbsp; * it n=
+ow.<o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc31"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;&nbsp; */</sp=
+an></span><span class=3D"sc0"><span lang=3D"EN-US" style=3D"font-size:10.0p=
+t"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: Some compilers do not like &gt;&gt;&gt; ending, so I added =
+spaces between each:</span></span><span class=3D"sc21"><span lang=3D"EN-US"=
+ style=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">map</span></span><span class=3D"sc101"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span class=
+=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">std</span></span>=
+<span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">::</s=
+pan></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">string</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">,</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">map</span></span><span class=3D"sc101"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span class=
+=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">std</span></span>=
+<span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">::</s=
+pan></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">string</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">,</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">vector</span></span><span class=3D"sc101"><=
+span lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span clas=
+s=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">product</span></=
+span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">=
+&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=3D"font-si=
+ze:10.0pt">
+</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">
+</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">database</span></span><span class=3D"sc101"><span lang=3D"EN-US" st=
+yle=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span lang=3D"E=
+N-US" style=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: Look at this &quot;std::&quot; spam :(</span></span><span c=
+lass=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:10.0pt"><o:p></o:p></=
+span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: No, &quot;using namespace std&quot; is forbidden in headers=
+.<o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">map</span></span><span class=3D"sc101"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span class=
+=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">std</span></span>=
+<span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">::</s=
+pan></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">string</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">,</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">map</span></span><span class=3D"sc101"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span class=
+=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">std</span></span>=
+<span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">::</s=
+pan></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">string</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">,</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">vector</span></span><span class=3D"sc101"><=
+span lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span clas=
+s=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">product</span></=
+span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">=
+&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=3D"font-si=
+ze:10.0pt">
+</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">
+</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">&gt;::</span></span><span class=3D"sc11"><span lang=3D"EN-US" styl=
+e=3D"font-size:10.0pt">iterator</span></span><span class=3D"sc0"><span lang=
+=3D"EN-US" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">store_iterator</span></span><span class=3D"sc101"><span lang=3D"EN-=
+US" style=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span lan=
+g=3D"EN-US" style=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">map</span></span><span class=3D"sc101"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span class=
+=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">std</span></span>=
+<span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">::</s=
+pan></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">string</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">,</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">vector</span></span><span class=3D"sc101"><=
+span lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span clas=
+s=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">product</span></=
+span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">=
+&gt;</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=3D"font-si=
+ze:10.0pt">
+</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">&gt;::</span></span><span class=3D"sc11"><span lang=3D"EN-US" styl=
+e=3D"font-size:10.0pt">iterator</span></span><span class=3D"sc0"><span lang=
+=3D"EN-US" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">market_iterator</span></span><span class=3D"sc101"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span la=
+ng=3D"EN-US" style=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">vector</span></span><span class=3D"sc101"><=
+span lang=3D"EN-US" style=3D"font-size:10.0pt">&lt;</span></span><span clas=
+s=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:10.0pt">product</span></=
+span><span class=3D"sc101"><span lang=3D"EN-US" style=3D"font-size:10.0pt">=
+&gt;::</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font=
+-size:10.0pt">iterator</span></span><span class=3D"sc0"><span lang=3D"EN-US=
+" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">product_iterator</span></span><span class=3D"sc101"><span lang=3D"E=
+N-US" style=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span l=
+ang=3D"EN-US" style=3D"font-size:10.0pt"><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: No const iterators for now, thank you. Maybe in my next pro=
+ject.</span></span><span lang=3D"EN-US"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">The three iterators declared ab=
+ove are all used in multiple methods and their presence greatly improve my =
+code=E2=80=99s readability. The point at which we stop iterating could also=
+ be easily reused (like a =E2=80=9Cbookmark=E2=80=9D), if the
+ program was to be extended. (Start the search from [this point], resume pr=
+evious search from last result, what is the last item looked at, etc.) Ther=
+efore they do, kind of, represent the data class=E2=80=99 state and belong =
+in the inner structure. Thus the existence
+ of private iterators is at least somewhat justified.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">On the other hand I have no goo=
+d excuse for why I put member variables in the public section =E2=80=93 tha=
+t was indeed ill done. (Even if it=E2=80=99s just a glorified struct holdin=
+g a string-int pair as it is.) But I am able to fabricate
+ at least one semi-good reason:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">The few public member variables=
+ that I have (two) are intended to be used by the main program (without any=
+ of that getter and setter nonsense that we do in Java). I even prove my aw=
+areness of the rule and declare my intentional
+ breaking of it, in the comments:<o:p></o:p></span></p>
+<div>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc101"><sp=
+an lang=3D"EN-US" style=3D"font-size:10.0pt;font-weight:normal">public</spa=
+n></span><span class=3D"sc0"><b><span lang=3D"EN-US" style=3D"font-size:10.=
+0pt">:</span></b></span><span class=3D"sc31"><b><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt"><o:p></o:p></span></b></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc31"><spa=
+n lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp; [=E2=80=A6]<=
+o:p></o:p></span></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">std</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">::</span></span><span class=3D"sc11"><span lang=3D"EN=
+-US" style=3D"font-size:10.0pt">string</span></span><span class=3D"sc0"><sp=
+an lang=3D"EN-US" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">name</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: Not bothering with private<o:p></o:p></span></span></p>
+<p class=3D"MsoNormal" style=3D"background:white"><span class=3D"sc0"><span=
+ lang=3D"EN-US" style=3D"font-size:10.0pt">&nbsp;&nbsp;&nbsp;
+</span></span><span class=3D"sc161"><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt">double</span></span><span class=3D"sc0"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">
+</span></span><span class=3D"sc11"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">price</span></span><span class=3D"sc101"><span lang=3D"EN-US" style=
+=3D"font-size:10.0pt">;</span></span><span class=3D"sc0"><span lang=3D"EN-U=
+S" style=3D"font-size:10.0pt">
+</span></span><span class=3D"sc21"><span lang=3D"EN-US" style=3D"font-size:=
+10.0pt">//3ICE: Getter setter is nothing but spam anyway.<o:p></o:p></span>=
+</span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">The ability to access name and =
+price without having to go through a getter (And setter in case a product n=
+eeds to be renamed / price change) improves readability and shortens the pr=
+ogram code =E2=80=93 cutting out an unnecessary
+ clutter of four helper functions and generally improving execution speed. =
+There is no security concern by making them public as this is a low level d=
+ata structure, hiding nothing (straightforward implementation). And the des=
+ign of the product class is set
+ in stone =E2=80=94 a glorified struct holding a string &#43; double pair a=
+nd nothing else =E2=80=94 final, so future changes wouldn=E2=80=99t even br=
+eak old versions, all without any backward compatibility shims.<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">I hope I have demonstrated adeq=
+uately my deepest regret for having made the above mistakes, and pray that =
+my excuses convinced you to look the other way when re-evaluating my work.<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">If you cannot grant me this boo=
+n for your hands are tied by policy (faulty class design =E2=86=92 grade ca=
+nnot go over 3 no matter what), please let me know and I will attempt to pe=
+tition Professor Ari //aps himself.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Thank you for your consideratio=
+n,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Daniel =E2=80=9C3ICE=E2=80=9D B=
+erezvai<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">262849<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">p.s.: Any hints for tomorrow=E2=
+=80=99s exam? I don=E2=80=99t intend to bring any books or printed material=
+. I=E2=80=99ll just refresh my memory on the core tested concepts.<o:p></o:=
+p></span></p>
+</div>
+</body>
+</html>
