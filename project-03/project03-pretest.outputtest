@@ -1,0 +1,95 @@
+chores> @@init 3
+New priority list with levels 1-3 initialized.
+chores> @@init 10
+New priority list with levels 1-10 initialized.
+chores> @@init 0
+Error: ...
+chores> @@init
+Error: ...
+chores> @@init a
+Error: ...
+chores> @@init 3
+New priority list with levels 1-3 initialized.
+chores> @@add 2 pay the electricity bill
+New chore added to priority level 2.
+chores> @@add 3 feed the goldfish
+New chore added to priority level 3.
+chores> @@add 2 vacuum
+New chore added to priority level 2.
+chores> @@add 2 wash dishes
+New chore added to priority level 2.
+chores> @@add 0 fix the bike tire
+Error: ...
+chores> @@add 4 fix the bike tire
+Error: ...
+chores> @@add 3
+Error: ...
+chores> @@add fix the bike tire
+Error: ...
+chores> @@add
+Error: ...
+chores> @@print
+Priority level 3:
+  1. feed the goldfish
+Priority level 2:
+  2. pay the electricity bill
+  3. vacuum
+  4. wash dishes
+chores> @@print 1
+Error: ...
+chores> @@next
+feed the goldfish
+chores> @@print
+Priority level 2:
+  1. pay the electricity bill
+  2. vacuum
+  3. wash dishes
+chores> @@next
+pay the electricity bill
+chores> @@print
+Priority level 2:
+  1. vacuum
+  2. wash dishes
+chores> @@next
+vacuum
+chores> @@print
+Priority level 2:
+  1. wash dishes
+chores> @@next
+wash dishes
+chores> @@print
+chores> @@next
+--- no chores left ---
+chores> @@print
+chores> @@next 1
+Error: ...
+chores> @@init 4
+New priority list with levels 1-4 initialized.
+chores> @@add 3 pay the electricity bill
+New chore added to priority level 3.
+chores> @@add 4 feed the goldfish
+New chore added to priority level 4.
+chores> @@add 3 vacuum
+New chore added to priority level 3.
+chores> @@add 3 wash dishes
+New chore added to priority level 3.
+chores> @@print
+Priority level 4:
+  1. feed the goldfish
+Priority level 3:
+  2. pay the electricity bill
+  3. vacuum
+  4. wash dishes
+chores> @@erase 1
+chores> @@erase 3
+chores> @@print
+Priority level 3:
+  1. pay the electricity bill
+  2. vacuum
+chores> @@erase 3
+Error: ...
+chores> @@erase 0
+Error: ...
+chores> @@erase
+Error: ...
+chores> @@quit
