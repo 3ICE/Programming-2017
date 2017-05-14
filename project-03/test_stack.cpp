@@ -1,3 +1,11 @@
+/** This file used to be an automated test for my stack implementation.
+ * Until it got completely destroyed by all the new changes.
+ * Kept as reference / memorabilia. To remember... Back when it was simple...
+ * Mostly commented out now. Does nothing whatsoever. Interesting read though.
+ * @author Daniel "3ICE" Berezvai
+ * @student_id 262849
+ * @email daniel.berezvai@student.tut.fi
+ */
 #include "stack.hh"
 #include <iostream>
 

@@ -1,3 +1,10 @@
+/** This file is merely an example - not part of the final solution.
+ * I used it as a reference and so decided to keep it.
+ * Originally submitted for weekly-assignment-13, minor changes afterward.
+ * @author Daniel "3ICE" Berezvai
+ * @student_id 262849
+ * @email daniel.berezvai@student.tut.fi
+ */
 #include<iostream>
 #include<iomanip>
 #include<string>
@@ -9,14 +16,16 @@ void regex_example() {
     //3ICE: Ignores leading and trailing spaces as well (no trim necessary)
     regex reg("\\ *([0-9]{1,2})\\.([0-9]{1,2})\\.([0-9]{4})\\ *");
     smatch res;
-    cout<<"(CTRL+C to quit) Input dates in the following format: dd.mm.yyyy"<<endl;
+    cout<<"(CTRL+C to quit) Input dates in the following format: dd.mm.yyyy"
+       <<endl;
     string line;
     while(getline(cin, line)){
         if(regex_match(line, res, reg)){
             string d = res.str(1);
             string m = res.str(2);
             string y = res.str(3);
-            cout<<setfill('0')<<y<<"-"<<setw(2)<<m<<"-"<<setw(2)<<d<<endl<<endl;
+            cout<<setfill('0')<<y<<"-"<<setw(2)<<m<<"-"<<setw(2)<<d<<endl
+               <<endl;
         } else cout<<"Not a recognized date!"<<endl;
     }
 }

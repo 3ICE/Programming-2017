@@ -1,11 +1,20 @@
+/** This file is a linked list implementation. I hate implementing linked lists
+ * by hand. Especialy tough was the part about erasing by "running number" id.
+ * @author Daniel "3ICE" Berezvai
+ * @student_id 262849
+ * @email daniel.berezvai@student.tut.fi
+ */
 #include "queue.hh"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+//3ICE: "Constructor?" "Yes, hello, this is Constructor."
 Queue::Queue(): fst(nullptr), lst(nullptr){}
 
+//3ICE: Had issues with destructor randomly being called on objects I still
+//3ICE: needed. Out of scope problem or something. I messed up operator[] bad.
 Queue::~Queue(){
     //cout<<"deleting queue:"<<endl;
     Cell* p;
@@ -23,6 +32,7 @@ bool Queue::empty() const{
     return fst == nullptr;
 }
 
+//3ICE: Specialized print function with the fancy two spaces in front.
 int Queue::print(int continue_from) const {
     Cell* p = fst;
 
@@ -34,6 +44,7 @@ int Queue::print(int continue_from) const {
     return continue_from;
 }
 
+//3ICE: Point of inefficiency (Have to recount each time we erase)
 int Queue::count() const {
     Cell* p = fst;
     int counter = 0;
@@ -44,6 +55,8 @@ int Queue::count() const {
     return counter;
 }
 
+
+//3ICE: Standard push_back method, I think.
 void Queue::push_back(const string& name){
     Cell* p(new Cell);
 
@@ -59,6 +72,7 @@ void Queue::push_back(const string& name){
     }
 }
 
+//3ICE: Standard pop_front as well.
 bool Queue::pop_front(string& name) {
     if(empty()){
         return false;
@@ -79,6 +93,9 @@ bool Queue::pop_front(string& name) {
     return true;
 }
 
+//3ICE: Now this erase is anything but standard. And is done in two steps.
+//3ICE: Number of debug prints directly correlates to how much trouble I had
+//with this function. Especially that OOPS! - I was erasing from the wrong list
 bool Queue::erase(int id){
     //cout<<"  Deleting #"<<id<<endl;
     if(fst == nullptr || id < 0){
@@ -101,7 +118,10 @@ bool Queue::erase(int id){
     //cout<<"   Fast forwarding to #"<<id-1<<endl;
     Cell* p = fst;
     int counter = 1;
+    //cout<<p<<" "<<p->name<<" "<<p->nxt<<endl;
+    //cout<<counter <<" "<< id<<endl;
     while(counter < id){
+        //cout<<p<<" "<<p->name<<" "<<p->nxt<<endl;
         if(p == lst){
             //cout<<"  OOPS!"<<endl;
             return false;
