@@ -1,0 +1,103 @@
+product search> @@chains
+Cash-and-Carry
+Farmers-Market
+Lock&Stock
+Qwicky-Mart
+Stop-and-Shop
+Store-24-7
+product search> @@chains XXXXX
+Error: ...
+product search> @@stores Cash-and-Carry
+Hamsterdam
+Pimlico
+product search> @@stores Farmers-Market
+Barklay
+Eastwood
+Hamsterdam
+Kresson
+Oaklee
+Oliver
+Pimlico
+Rosemont
+Upton
+Westgate
+product search> @@stores Lock&Stock
+Purnell
+product search> @@stores Qwicky-Mart
+Barklay
+Eastwood
+Kresson
+Oaklee
+Oliver
+Purnell
+Rosemont
+Upton
+Westgate
+product search> @@stores Stop-and-Shop
+Barklay
+Eastwood
+Hamsterdam
+Kresson
+Oaklee
+Oliver
+Pimlico
+Rosemont
+Upton
+Westgate
+product search> @@stores Store-24-7
+Barklay
+Eastwood
+Kresson
+Oaklee
+Oliver
+Pimlico
+Purnell
+Rosemont
+Upton
+Westgate
+product search> @@stores
+Error: ...
+product search> @@stores Store-24-7 Stop-and-Shop
+Error: ...
+product search> @@stores XXXXX
+Error: ...
+product search> @@cheapest this_product_is_cheapest_in_one_place
+1.52
+Lock&Stock Purnell
+product search> @@cheapest this_product_is_equally_cheap_in_two_places
+11.52
+Lock&Stock Purnell
+Stop-and-Shop Pimlico
+product search> @@cheapest this_product_is_equally_cheap_in_four_places
+11.52
+Lock&Stock Purnell
+Qwicky-Mart Purnell
+Stop-and-Shop Hamsterdam
+Store-24-7 Purnell
+product search> @@cheapest XXXXX
+This product is not available anywhere.
+product search> @@cheapest sama_product_is_repeating_for_same_store
+3.60
+Farmers-Market Kresson
+product search> @@cheapest
+Error: ...
+product search> @@cheapest product_name_a product_name_b
+Error: ...
+product search> @@selection Cash-and-Carry Hamsterdam
+this_product_is_equally_cheap_in_two_places 12.51
+product search> @@selection Farmers-Market Kresson
+product_name_a 25.05
+product_name_b 213.07
+product_name_c 221.19
+sama_product_is_repeating_for_same_store 3.60
+product search> @@selection
+Error: ...
+product search> @@selection Farmers-Market
+Error: ...
+product search> @@selection Farmers-Market Kresson Hamsterdam
+Error: ...
+product search> @@selection XXXXX Hamsterdam
+Error: ...
+product search> @@selection Farmers-Market XXXXX
+Error: ...
+product search> @@quit

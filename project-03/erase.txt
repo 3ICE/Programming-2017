@@ -1,0 +1,31 @@
+chores> print
+Priority level 3:
+ 1. feed the goldfish
+Priority level 2:
+ 2. pay the electricity bill
+ 3. vacuum
+ 4. wash dishes
+
+chores> erase 1
+
+chores> print
+Priority level 2:
+ 1. pay the electricity bill
+ 2. vacuum
+ 3. wash dishes
+
+chores> erase 3
+
+chores> print
+Priority level 2:
+ 1. pay the electricity bill
+ 2. vacuum
+
+chores> erase 3
+Error: there is no such chore.
+
+chores> erase 0
+Error: the running number must be larger than 0.
+
+chores> erase
+Error: the running number is missing.
