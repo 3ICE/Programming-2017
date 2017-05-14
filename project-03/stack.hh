@@ -1,3 +1,4 @@
+#include "queue.hh"
 #include <iostream>
 
 using namespace std;
@@ -15,7 +16,7 @@ private:
     int max_size; //m
 
 public:
-    Stack():max_size(0){}
+    Stack():array(new TYPE[3]),max_size(0){}
 
     ~Stack(){
         delete [] array;
@@ -29,6 +30,9 @@ public:
         //cout<<" to "<<max_size<<endl;
         delete[] array;
         array = new TYPE[max_size];
+        //for(int i=0; i<max_size; ++i){
+        //    array[i].push_back("33");
+        //}
 
         //If there was an earlier list, it is destroyed and a new one is
         //initialized from scratch (unless an error condition is met)
@@ -51,24 +55,44 @@ public:
         return array[idx];
     }
 
+    void push_back(int priority, string name){
+        array[priority-1].push_back(name);
+    }
+
     void print() const{
         int i = max_size;
         int continue_from = 1;
-        while(i > 1){
-            if(!array[i--].empty()){
+        while(i > 0){
+            --i;
+            if(!array[i].empty()){
                 cout << "Priority level " << i + 1 << ":"<<endl;
                 continue_from = array[i].print(continue_from);
-            }
+            }//else{cout<<i;}
         }
     }
 
     bool erase(int id){
+        //cout<<"erasing "<<id<<endl;
         int i = max_size;
         int count = 1;
-        while(i > 1 && id < count){
-            count += array[i--].count();
+        while(i > 0 && id >= count){
+            --i;
+            //cout<<" i is "<<i<<", count is "<<count<<endl;
+            count += array[i].count();
+            //cout<<" at "<<i<<", skipped "<<count<<endl;
         }
-        return array[i++].erase(count-id);
+        //cout<<" STOP: i is "<<i<<", "<<count<<" is off by "<<count-id<<endl;
+        //cout<<"erased ["<<i<<"] ("<<count-(count-id)-1<<")"<<endl;
+        //3ICE: I am so confused by this math! -- brute forced my way to this:
+        return array[i].erase(count-(count-id)-1);
+    }
+
+    bool empty(int id){
+        return array[id].empty();
+    }
+
+    void pop_front(int priority, string& name){
+        array[priority].pop_front(name);
     }
 };
 

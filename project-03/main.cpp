@@ -21,7 +21,7 @@ const string SPACE = "\\ +";
 const regex INIT = make_regex("init" + SPACE + "([0-9]+)");
 const regex INIT_STUPID = make_regex("init" + SPACE + "(.*)");
 
-const regex ADD = make_regex("add" + SPACE + "(.*)" + SPACE + "(.*)");
+const regex ADD = make_regex("add" + SPACE + "(.*?)" + SPACE + "(.*)");
 //3ICE: Stupid, stupid requirements.
 const regex ADD_EXTRA_STUPID = make_regex("add" + SPACE + "([^0-9]+)" + SPACE + "(.*)");
 const regex ADD_STUPID = make_regex("add" + SPACE + "([0-9]+)");
@@ -46,6 +46,7 @@ string first_word(const string& sentence){
 int main() {
     //3ICE: A stack of queues is perfect for this.
     Stack<Queue> db;
+    //Stack<Stack<string>> db;
 
     //3ICE: Regular expression result set (with queryable capture groups)
     smatch result;
@@ -103,7 +104,8 @@ int main() {
                          << "between 1-" << size << "." << endl;
                 } else {
                     string task = result.str(2);
-                    db[priority-1].push_back(task);
+                    //cout<<"adding"<<endl;
+                    db.push_back(priority, task);
                     cout << "New chore added to priority level "
                          << priority <<"." << endl;
                 }
@@ -139,8 +141,8 @@ int main() {
 
             string task = "";
             for(int i=db.size()-1; i>=0; --i){
-                if(!db[i].empty()) {
-                    db[i].pop_front(task);
+                if(!db.empty(i)) {
+                    db.pop_front(i, task);
                     break;
                 }
             }
@@ -152,7 +154,7 @@ int main() {
         }
         else if(command== "erase"){
             //3ICE: Intentionally stupidifying my regex just so that I can
-            //catch one stupid error (requirement) This task really upset me.
+            //catch one stupid (required) error. This task really upset me.
             if(!regex_match(input, result, ERASE_STUPID)){
                 cerr << "Error: the running number is missing." << endl;
                 continue;
@@ -163,7 +165,6 @@ int main() {
                 id = stoi(result.str(1));
             } catch(...){
                 id = 0;
-                continue;
             }
             if(id==0){
                 //3ICE: Or if it's not a number at all.
@@ -171,11 +172,10 @@ int main() {
                      << endl;
                 continue;
             }
-            if(db.erase(id)){
-                //Do nothing :) Yes, zero output.
-            } else {
+            if(!db.erase(id)){
                 cerr << "Error: there is no such chore." << endl;
             }
+            //Else: Do nothing :) Yes, zero output.
         }
         else if(command== "quit"){
             //Handled in the while loop condition.

@@ -7,11 +7,12 @@ using namespace std;
 Queue::Queue(): fst(nullptr), lst(nullptr){}
 
 Queue::~Queue(){
+    //cout<<"deleting queue:"<<endl;
     Cell* p;
     while(fst != nullptr){
         p = fst;
         fst = fst->nxt;
-
+        //cout<<" deleting item "<<p->name<<endl;
         delete p;
     }
 }
@@ -26,7 +27,7 @@ int Queue::print(int continue_from) const {
     Cell* p = fst;
 
     while(p != nullptr){
-        cout <<" " << continue_from << ". " << p->name << endl;
+        cout << "  " << continue_from << ". " << p->name << endl;
         ++continue_from;
         p = p->nxt;
     }
@@ -79,10 +80,12 @@ bool Queue::pop_front(string& name) {
 }
 
 bool Queue::erase(int id){
-    if(fst == nullptr){
+    //cout<<"  Deleting #"<<id<<endl;
+    if(fst == nullptr || id < 0){
         return false;
     }
     if(id == 0){
+        //cout<<"   Deleting first is special case"<<endl;
         Cell* p = fst;
 
         if(fst == lst){
@@ -95,15 +98,17 @@ bool Queue::erase(int id){
         delete p;
         return true;
     }
-
+    //cout<<"   Fast forwarding to #"<<id-1<<endl;
     Cell* p = fst;
-    int counter = 0;
+    int counter = 1;
     while(counter < id){
         if(p == lst){
+            //cout<<"  OOPS!"<<endl;
             return false;
         }
         p = p->nxt;
         ++counter;
+        //cout<<"  "<<counter<<" "<<p->name<<endl;
     }
 
     // Here p points to the cell that is right in front of the id'th element.
@@ -112,9 +117,11 @@ bool Queue::erase(int id){
     p->nxt = q->nxt;
 
     if(lst == q){
+        //cout<<"   Deleting last is special case, so updated lst"<<endl;
         lst = p;
     }
 
+    //cout<<"   Deleting #"<<id<<": "<<q->name<<endl;
     delete q;
     return true;
 }
