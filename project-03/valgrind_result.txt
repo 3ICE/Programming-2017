@@ -1,0 +1,33 @@
+Analyzing memory of /home/berezvai/TIE-02206/build-project-03-Desktop-Debug/project-03
+Analyzing finished.
+
+Analyzing memory of /home/berezvai/TIE-02206/build-project-03-Desktop-Debug/project-03
+==32612== Memcheck, a memory error detector
+==32612== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==32612== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==32612== Command: /home/berezvai/TIE-02206/build-project-03-Desktop-Debug/project-03
+==32612== 
+==32612== (action at startup) vgdb me ... 
+==32612== 
+==32612== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==32612==   /path/to/gdb /home/berezvai/TIE-02206/build-project-03-Desktop-Debug/project-03
+==32612== and then give GDB the following command
+==32612==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=32612
+==32612== --pid is optional if only one valgrind process is running
+==32612== 
+==32612== 
+==32612== HEAP SUMMARY:
+==32612==     in use at exit: 72,704 bytes in 1 blocks
+==32612==   total heap usage: 1,779 allocs, 1,778 frees, 134,707 bytes allocated
+==32612== 
+==32612== LEAK SUMMARY:
+==32612==    definitely lost: 0 bytes in 0 blocks
+==32612==    indirectly lost: 0 bytes in 0 blocks
+==32612==      possibly lost: 0 bytes in 0 blocks
+==32612==    still reachable: 72,704 bytes in 1 blocks
+==32612==         suppressed: 0 bytes in 0 blocks
+==32612== Rerun with --leak-check=full to see details of leaked memory
+==32612== 
+==32612== For counts of detected and suppressed errors, rerun with: -v
+==32612== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Analyzing finished.
